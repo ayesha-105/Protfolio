@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  </head>
+  <body>
+    <div id="background-canvas"></div>
+    <nav id="desktop-nav">
+      <div class="logo">Ayesha Malik</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="project.html">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+      <div class="logo">Ayesha Malik</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <section id="profile">
+      <div class="section__pic-container">
+        <!-- Change Profile Pic Here-->
+        <img
+          src="./assets/profile/profile-pic-7.0.png"
+          alt="Ayesha Malik profile picture"
+          style="border-radius: 12%; margin-bottom: 2rem"
+        />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Ayesha Malik</h1>
+        <p class="section__text__p2">
+          <span style="color: aqua">Data Analyst</span>
+        </p>
+        <div class="btn-container">
+          <!-- Resume Update Here -->
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+
+        <div id="socials-container">
+          <a
+            href="https://www.linkedin.com/in/ayeshamalik05?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin icon linkedin"></i>
+          </a>
+          <a href="https://github.com/ayesha-105" target="_blank">
+            <i class="fab fa-github icon github"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <!-- About Pic Update Here -->
+          <img
+            src="./assets/profile/profile-pic-8.0.jpeg"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <i class="fas fa-graduation-cap"></i>
+              <h3 style="margin-top: 0.5rem">Education</h3>
+              <br />
+              <p>B.Sc. Data Science<br />Sindh Madressatul Islam University</p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/mlsa-removebg-preview.png"
+                alt="Experience icon"
+                class="icon details-container-img"
+              />
+              <!-- <h3>MLSA</h3> -->
+              <p>Ex Beta Microsoft Learn Student Ambassador MLSC-SMIU</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <!-- About Update Here -->
+            <p style="color: rgb(179, 179, 179)">
+              🧕 I'm
+              <span style="color: aqua; font-weight: 700">Ayesha Malik</span>, a
+              <strong style="color: #fff"
+                >Data Science student at Sindh Madressatul Islam
+                University</strong
+              >. I enjoy working with data to uncover patterns, solve real-world
+              problems, and support decision-making. During my time as a
+              <strong style="color: #fff"
+                >Microsoft Learn Student Ambassador</strong
+              >
+              , I led engaging sessions and shared practical knowledge with
+              fellow learners. I'm always excited to create opportunities where
+              others can learn and grow alongside me.
+              <br />
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+
+    <!-- Skills Section -->
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Skills</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <div class="article-container">
+              <!-- Skill No 01 -->
+              <article>
+                <i class="devicon-python-plain colored"></i>
+                <div>
+                  <h3 style="padding-top: 1rem">Python</h3>
+                </div>
+              </article>
+              <!-- Skill No 02 -->
+              <article>
+                <img
+                  src="./assets/power.jfif"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3 style="padding-top: 1rem">Power Bi</h3>
+                </div>
+              </article>
+              <!-- Skill No 03 -->
+              <article>
+                <img
+                  src="./assets/postgresql-removebg-preview.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3 style="padding-top: 1rem">Postgresql</h3>
+                </div>
+              </article>
+              <!-- Skill No 04 -->
+              <article>
+                <img
+                  src="./assets/excel.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3 style="padding-top: 1rem">Microsoft Excel</h3>
+                </div>
+              </article>
+              <!-- Skill No 05 -->
+              <!-- More Skills -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+
+    <!-- Project Section -->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <a
+              href="https://github.com/ayesha-105/Al_Barkat_Ecommerce_Store_Dashboard"
+              style="text-decoration: none"
+            >
+              <div class="article-container">
+                <img
+                  src="./assets/project-2.0.jpeg"
+                  alt="Project 2"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">
+                Al-Barkat E-commerce Sales Dashboard 📊
+              </h2>
+              <p style="color: rgb(179, 179, 179)">
+                This Dashboard built in <strong style="color: #fff;">Power BI</strong>, showcasing
+                sales insights by quarter, state, category, and customer. Used
+                interactive visuals like cards, bar charts, pie charts, and
+                slicers to generate meaningful business insights.
+              </p>
+            </a>
+          </div>
+          <div class="details-container color-container">
+            <a
+              href="https://github.com/ayesha-105/Pakistan_Sales_Analysis"
+              style="text-decoration: none"
+            >
+              <div class="article-container">
+                <img
+                  src="./assets/project-1.0.jpeg"
+                  alt="Project 3"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">
+                Pakistan Sales Analysis 📈
+              </h2>
+              <p style="color: rgb(179, 179, 179)">
+                This EDA project analyzes sales data from Pakistan to understand
+                customer behavior and purchasing trends. Key insights include
+                top-selling categories, high-performing regions, and
+                gender-based buying patterns.
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Explore</p>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <a href="project.html">
+            <i class="fas fa-laptop"></i>
+          </a>
+          <p><a href="project.html">More Projects >></a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership & Activities Section -->
+    <p class="section__text__p1">A window Into</p>
+    <h1 class="title">Activities</h1>
+    <section id="experience2">
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Leadership & Activities</h2>
+            <div class="article-container">
+              <!-- Leadership & Activities No 1 -->
+              <article>
+                <i class="fas fa-users fa-Vol"></i>
+                <div>
+                  <h3 style="padding-left: 0.5rem">Volunteer</h3>
+                  <p style="font-size: 0.8rem; padding-left: 0.5rem">
+                    Actively volunteered at my university’s Sustainovation Expo,
+                    where I helped coordinate registrations, managed the
+                    monitoring process, and documented student groups presenting
+                    innovative ideas.
+                  </p>
+                </div>
+              </article>
+              <!-- Leadership & Activities No 2 -->
+              <article>
+                <i class="fas fa-desktop fa-Vol"></i>
+                <div>
+                  <h3 style="padding-left: 0.5rem">Live Sessions</h3>
+                  <p style="font-size: 0.8rem; padding-left: 0.5rem">
+                    Delivered interactive online sessions on SQL with 50+
+                    attendees. Covered all concepts through real-world hands-on
+                    examples.
+                  </p>
+                </div>
+              </article>
+              <!-- Leadership & Activities No 3 -->
+              <article>
+                <img
+                  src="./assets/mlsc-smiu.png"
+                  alt="Experience icon"
+                  class="icon2"
+                />
+                <div>
+                  <h3>Ex Member</h3>
+                  <p style="font-size: 0.8rem; padding-left: -0.5rem">
+                    Worked as a Technical Team Member of the MLSC SMIU
+                    community. Contributed to managing event logistics and
+                    delivering technical sessions.
+                  </p>
+                </div>
+              </article>
+              <!-- Leadership & Activities No 4 -->
+              <!-- Add more Leadership & Activities Here  -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <p class="section__text__p1">Explore</p>
+    <h1 class="title">Events</h1>
+    <section class="memorial-section">
+      <!-- Event no 1 -->
+      <div class="memorial-card">
+        <div class="swiper memorial-carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-1.3.jpeg"
+                class="project-img"
+                alt="1a"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-1.1.jpeg"
+                class="project-img"
+                alt="1b"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-1.0.jpeg"
+                class="project-img"
+                alt="1c"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card-caption">
+          <h3>SUSTAINOVATION Expo 2025 SMIU</h3>
+          <br />
+          <p>
+            Volunteered at the SUSTAINOVATION Expo 2025 at SMIU — <br />
+            a memorable first experience at a mega innovation event, filled with
+            teamwork, learning, and inspiration.
+          </p>
+        </div>
+      </div>
+      <!-- Event no 2 -->
+      <div class="memorial-card">
+        <div class="swiper memorial-carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-2.0.jpeg"
+                class="project-img"
+                alt="2a"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-2.1.jpeg"
+                class="project-img"
+                alt="2b"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-2.2.jpeg"
+                class="project-img"
+                alt="2c"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-2.3.jpeg"
+                class="project-img"
+                alt="2c"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card-caption">
+          <h3>Data Quest Hackathon FAST</h3>
+          <br />
+          <p>
+            Participated in Data Quest Hackathon at FAST Karachi, tackling
+            real-world SQL data challenges and gaining invaluable hands-on
+            experience. Proud of the learning and teamwork!
+          </p>
+        </div>
+      </div>
+      <!-- Event no 3 -->
+      <div class="memorial-card">
+        <div class="swiper memorial-carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-3.1.jpeg"
+                class="project-img"
+                alt="2a"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-3.0.jpeg"
+                class="project-img"
+                alt="2b"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card-caption">
+          <h3>TECHPRENEUR SUMMIT 2024 UIT</h3>
+          <br />
+          <p>
+            TECHPRENEUR SUMMIT 2024 at UIT — explored startup-building insights,
+            Microsoft Founders Hub, and enjoyed an inspiring talk by Ahmed Rauf
+            Essa.
+          </p>
+        </div>
+      </div>
+      <!-- Event no 4 -->
+      <div class="memorial-card">
+        <div class="swiper memorial-carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-4.0.jpeg"
+                class="project-img"
+                alt="2a"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-4.1.jpeg"
+                class="project-img"
+                alt="2b"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-4.2.jpeg"
+                class="project-img"
+                alt="2b"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card-caption">
+          <h3>CodeJam 2.0 by GDSC-SMIU</h3>
+          <br />
+          <p>
+            Attended CodeJam 2.0 by GDSC-SMIU, enjoyed insightful sessions, and
+            won a LinkedIn Premium voucher from MLSA-Karachi by participating in
+            an event activity.
+          </p>
+        </div>
+      </div>
+      <!-- Event no 5 -->
+      <div class="memorial-card">
+        <div class="swiper memorial-carousel">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-5.0.jpeg"
+                class="project-img"
+                alt="2a"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="assets/events-pic/event-5.1.jpeg"
+                class="project-img"
+                alt="2b"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="card-caption">
+          <h3>Microsoft Fest 2024 MLSC-SMIU</h3>
+          <br />
+          <p>
+            Attended Microsoft Fest 2024, organized by MLSC-SMIU. Gained
+            valuable insights on Copilot, prompt engineering, and career growth
+            from industry experts.
+          </p>
+        </div>
+      </div>
+      <!-- Event no 6 -->
+      <!-- Add Events Here -->
+    </section>
+
+    <!-- Contact Section     -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <a
+            href="https://www.linkedin.com/in/ayeshamalik05?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+          >
+            <i class="fab fa-linkedin icon linkedin"></i>
+          </a>
+        </div>
+        <div class="contact-info-container">
+          <a href="mailto:ayeshamalik4a1@gmail.com">
+            <i class="fa-solid fa-envelope icon"></i>
+          </a>
+        </div>
+        <div class="contact-info-container">
+          <a href="https://github.com/ayesha-105" target="_blank">
+            <i class="fab fa-github icon github"></i>
+          </a>
+        </div>
+        <div class="contact-info-container">
+          <a
+            href="https://www.instagram.com/ayeshatechinsights?igsh=MXZsbGh2NGlwdGFlOA=="
+            target="_blank"
+          >
+            <i class="fab fa-instagram icon instagram-icon"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
