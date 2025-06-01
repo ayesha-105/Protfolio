@@ -2,6 +2,9 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
+:root{
+  --gradient: linear-gradient(to bottom, aqua, white);
+}
 * {
   margin: 0;
   padding: 0;
@@ -189,14 +192,26 @@ section {
   gap: 5rem;
   height: 50vh;
 }
-
+.gradient-text {
+  background: linear-gradient(to bottom, aqua, white);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* For Firefox */
+  background-clip: text;
+  color: transparent;
+}
 .section__pic-container {
   display: flex;
   height: 400px;
   width: 400px;
   margin: auto 0;
 }
-
+.text-left {
+  text-align: left;
+}
+.font-600{
+  font-weight: 600;
+}
 .section__text {
   align-self: center;
   text-align: center;
@@ -283,7 +298,8 @@ section {
   border-radius: 2rem;
   background: transparent;
   border: 2px solid white;
-  color: white;
+  /* color: white; */
+  color: var(--gradient);
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -297,7 +313,7 @@ section {
   left: 0;
   width: 0;
   height: 100%;
-  background: white;
+  background: var(--gradient);
   transition: all 0.5s ease;
   z-index: -1;
 }
