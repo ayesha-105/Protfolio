@@ -24,41 +24,43 @@
   <body>
     <div id="background-canvas"></div>
     <nav id="desktop-nav">
-      <a href="index.html" style="text-decoration: none"
-        ><div class="logo">Ayesha Malik</div></a
-      >
+      <div class="logo">Ayesha Malik</div>
       <div>
         <ul class="nav-links">
           <li><a href="index.html">About</a></li>
-          <li><a href="index.html">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="index.html">Skills</a></li>
+          <li><a href="#project">Projects</a></li>
+          <li><a href="index.html">Activities</a></li>
+          <li><a href="index.html">Events</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </nav>
+
     <nav id="hamburger-nav">
-      <a href="index.html" style="text-decoration: none"
-        ><div class="logo">Ayesha Malik</div></a
-      >
+      <div class="logo">Ayesha Malik</div>
       <div class="hamburger-menu">
         <div class="hamburger-icon" onclick="toggleMenu()">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <div class="menu-links" style="z-index: 100">
+        <div class="menu-links">
           <li><a href="index.html" onclick="toggleMenu()">About</a></li>
-          <li><a href="index.html" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="index.html" onclick="toggleMenu()">Skills</a></li>
           <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="index.html" onclick="toggleMenu()">Activities</a></li>
+          <li><a href="index.html" onclick="toggleMenu()"> Events</a></li>
+          <li><a href="index.html" onclick="toggleMenu()">Contact</a></li>
         </div>
       </div>
     </nav>
-
     <!-- Project Section -->
     <section id="projects" style="margin-top: 5rem">
-      <p class="section__text__p1">Browse My Recent</p>
-      <h1 class="title">Projects</h1>
+      <h1 class="title" style="font-size: 1rem">
+        Browse My Recent<br />
+        <span style="font-size: 3rem">Projects</span>
+      </h1>
       <div class="experience-details-container">
         <div class="about-containers">
           <!-- Project No 1 -->
@@ -78,8 +80,9 @@
                 Al-Barkat E-commerce Sales Dashboard 📊
               </h2>
               <p style="color: rgb(179, 179, 179)">
-                This Dashboard built in <strong style="color: #fff;">Power BI</strong>, showcasing
-                sales insights by quarter, state, category, and customer. Used
+                This Dashboard built in
+                <strong style="color: #fff">Power BI</strong>, showcasing sales
+                insights by quarter, state, category, and customer. Used
                 interactive visuals like cards, bar charts, pie charts, and
                 slicers to generate meaningful business insights.
               </p>
@@ -143,8 +146,10 @@
 
     <!-- Contact Section -->
     <section id="contact">
-      <p class="section__text__p1">Get in Touch</p>
-      <h1 class="title">Contact Me</h1>
+      <h1 class="title" style="font-size: 1rem">
+        Get In Touch<br />
+        <span style="font-size: 3rem">Contact Me</span>
+      </h1>
       <div class="contact-info-upper-container">
         <div class="contact-info-container">
           <a
@@ -182,11 +187,6 @@
           </ul>
         </div>
       </nav>
-      <p>
-        Copyright &#169; 2025
-        <a href="https://github.com/ayesha-105">Ayesha Malik</a>
-        All Rights Reserved.
-      </p>
     </footer>
     <script src="script.js"></script>
   </body>
