@@ -39,6 +39,4 @@ This portfolio is my first step into putting my work out there.
 
 🌍 Connect With Me
 
-GitHub: @ayesha-105
-
-
+https://github.com/ayesha-105/Protfolio/blob/main/assets/ayesha-Protfolio.png
